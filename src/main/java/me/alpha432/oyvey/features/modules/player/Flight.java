@@ -20,7 +20,7 @@ public class Flight extends Module {
         if (mc.player != null) {
             mc.player.getAbilities().allowFlying = true;
             mc.player.getAbilities().flying = true;
-            mc.player.getAbilities().setFlySpeed(0.5f);  // Much faster flight speed
+            mc.player.getAbilities().setFlySpeed(3.0f);  // Much faster flight speed
             mc.player.sendAbilitiesUpdate();
         }
     }

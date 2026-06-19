@@ -45,11 +45,11 @@ public class Flight extends Module {
         boolean sneak = InputUtil.isKeyPressed(mc.getWindow().getHandle(), GLFW.GLFW_KEY_LEFT_SHIFT);
 
         if (jump) {
-            player.setVelocity(player.getVelocity().x, 3.0, player.getVelocity().z); // Ascend much faster
+            player.setVelocity(player.getVelocity().x, 1.0, player.getVelocity().z); // Ascend much faster
         } else if (sneak) {
-            player.setVelocity(player.getVelocity().x, -3.0, player.getVelocity().z); // Descend much faster
+            player.setVelocity(player.getVelocity().x, -1.0, player.getVelocity().z); // Descend much faster
         } else {
-            player.setVelocity(player.getVelocity().x, 0, player.getVelocity().z);
+            player.setVelocity(player.getVelocity().x, 1.0, player.getVelocity().z);
         }
     }
 

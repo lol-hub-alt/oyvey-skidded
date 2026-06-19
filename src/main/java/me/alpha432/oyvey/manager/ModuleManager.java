@@ -38,10 +38,10 @@ public class ModuleManager implements Jsonable, Util {
         modules.add(new Step());
         modules.add(new ReverseStep());
         modules.add(new FastPlace());
+        modules.add(new Flight());
         modules.add(new Velocity());
         modules.add(new BlockHighlight());
         modules.add(new NoFall());
-        modules.add(new Flight());
     }
 
     public Module getModuleByName(String name) {

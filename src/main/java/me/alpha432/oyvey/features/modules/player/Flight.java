@@ -11,10 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import org.lwjgl.glfw.GLFW;
 
 public class Flight extends Module {
-    private final MinecraftClient mc = MinecraftClient.getInstance();
-
     public Flight() {
-        super("Flight", "Enables player flight", Category.PLAYER, true, false, false);
+        super("Flight", "fly", Category.PLAYER, true, false, false);
     }
 
     @Override

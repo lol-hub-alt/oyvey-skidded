@@ -20,7 +20,7 @@ public class Flight extends Module {
         if (mc.player != null) {
             mc.player.getAbilities().allowFlying = true;
             mc.player.getAbilities().flying = true;
-            mc.player.getAbilities().setFlySpeed(0.05f);  // Adjust flight speed here
+            mc.player.getAbilities().setFlySpeed(0.5f);  // Much faster flight speed
             mc.player.sendAbilitiesUpdate();
         }
     }
@@ -30,7 +30,7 @@ public class Flight extends Module {
         if (mc.player != null) {
             mc.player.getAbilities().allowFlying = false;
             mc.player.getAbilities().flying = false;
-            mc.player.getAbilities().setFlySpeed(0.05f);
+            mc.player.getAbilities().setFlySpeed(0.05f);  // Reset to default slower speed on disable
             mc.player.sendAbilitiesUpdate();
         }
     }
@@ -41,16 +41,15 @@ public class Flight extends Module {
 
         PlayerEntity player = mc.player;
 
-        // Handle vertical motion for flying
         boolean jump = InputUtil.isKeyPressed(mc.getWindow().getHandle(), GLFW.GLFW_KEY_SPACE);
         boolean sneak = InputUtil.isKeyPressed(mc.getWindow().getHandle(), GLFW.GLFW_KEY_LEFT_SHIFT);
 
         if (jump) {
-            player.setVelocity(player.getVelocity().x, 0.5, player.getVelocity().z); // Ascend
+            player.setVelocity(player.getVelocity().x, 3.0, player.getVelocity().z); // Ascend much faster
         } else if (sneak) {
-            player.setVelocity(player.getVelocity().x, -0.5, player.getVelocity().z); // Descend
+            player.setVelocity(player.getVelocity().x, -3.0, player.getVelocity().z); // Descend much faster
         } else {
-            player.setVelocity(player.getVelocity().x, 0, player.getVelocity().z); // No vertical movement
+            player.setVelocity(player.getVelocity().x, 0, player.getVelocity().z);
         }
     }
 

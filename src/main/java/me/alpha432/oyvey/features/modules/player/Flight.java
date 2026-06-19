@@ -49,7 +49,7 @@ public class Flight extends Module {
         } else if (sneak) {
             player.setVelocity(player.getVelocity().x, -1.0, player.getVelocity().z); // Descend much faster
         } else {
-            player.setVelocity(player.getVelocity().x, 1.0, player.getVelocity().z);
+            player.setVelocity(player.getVelocity().x, 0.0, player.getVelocity().z);
         }
     }
 
